@@ -66,11 +66,14 @@ function App() {
       <Slider
         min={0} 
         max={100} 
+        valueLabelDisplay="auto"
         value={convertToPercent(bright, MAX_BRIGHT)} 
         onChange={(ev, value) => sendVal(BRIGHT_URL, invertPercent(value, MAX_BRIGHT), setBright)} />
+      <div>The brightness is {convertToPercent(bright, MAX_BRIGHT)}%</div>
       <Slider
         min={0} 
-        max={100} 
+        max={100}
+        valueLabelDisplay="auto" 
         value={convertToPercent(temp, MAX_TEMP)} 
         onChange={(ev, value) => sendVal(TEMP_URL, invertPercent(value, MAX_TEMP), setTemp)} />
       <div>The temp is {convertToPercent(temp, MAX_TEMP)}%</div>
